@@ -22,16 +22,16 @@ var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.l
 var options = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
     if(userGuess===computerGuess){
-        wins++;
+        numWins++;
         alert("Good job! You've won!");
         guessesleft = 10;
-        guessChoices = 0;
+        guessSelections = [];
     }
     else if(guessesleft===0){
-        losses++;
+        numLosses++;
         alert("Sorry, you didn't guess the correct letter. Let's try again.")
         guessesleft = 10;
-        guessChoices = 0;
+        guessSelections = [];
     }
     else if(userGuess!==computerGuess){
         guessesleft--;
